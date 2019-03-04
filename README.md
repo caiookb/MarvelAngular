@@ -17,5 +17,8 @@
 ### Documentação do código
 
 Para ver a documentação do código, baixe/clone o repositório e abra o index.html que está na pasta documentação.
-
 > documentation/index.html
+
+Documento foi gerado pelo compodoc. https://compodoc.app/.
+
+### Todos os dados foram fornecidos pela Marvel. © 2019 MARVEL
