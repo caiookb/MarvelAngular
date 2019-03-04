@@ -4,7 +4,8 @@
 # Como iniciar um servidor local para executar a aplicação
 1. Instale a última versão do Node.js
 
-2. No CMD, entre na pasta onde está o projeto Angular
+2. No CMD, entre na pasta onde está o projeto Angular, por exemplo.
+> C:\Users\<Nome de Usuário>\Download\MarvelAngular-master\MarvelAngular-master
 
 3. Quando estiver na pasta, execute o `npm install`
 
