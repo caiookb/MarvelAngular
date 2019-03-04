@@ -6,13 +6,15 @@
 
 2. No CMD, entre na pasta onde está o projeto Angular
 
-3. Quando estiver na pasta, execute o npm install
+3. Quando estiver na pasta, execute o `npm install`
 
-4. Posteriormente, execute o npm start para iniciar o servidor local
+4. Posteriormente, execute o `npm start` para iniciar o servidor local
 
 5. Navegue para http://localhost:4200/
 
 
-# Documentação do código está neste caminho abaixo
+### Documentação do código
 
-> documentation\index.html
+Para ver a documentação do código, baixe/clone o repositório e abra o index.html que está na pasta documentação.
+
+> documentation/index.html
