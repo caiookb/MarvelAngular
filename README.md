@@ -11,3 +11,8 @@
 4. Posteriormente, execute o npm start para iniciar o servidor local
 
 5. Navegue para http://localhost:4200/
+
+
+# Documentação do código está neste caminho abaixo
+
+> documentation\index.html
