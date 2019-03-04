@@ -1,0 +1,16 @@
+.container h2{
+  text-align: center;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.col-md-2:nth-child(1) img{
+  border: 5px solid red;
+}
+
+img {
+  border: 5px solid red;
+}
+
+
+

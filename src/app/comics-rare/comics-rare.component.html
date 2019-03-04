@@ -1,0 +1,15 @@
+<app-comics-rare-details [comic]="selectedComics"></app-comics-rare-details>
+
+<div class="container">
+  <h1> RARE COMICS </h1>
+  <div class="row">
+    <ul class='col-md-6' id="rimg" (click)="onSelect(comic)" *ngFor="let comic of comics  | slice:-11:-9">
+      <li>
+        <img [src]="comic.thumbnail.path + '/portrait_fantastic.' + comic.thumbnail.extension">
+      </li>
+      <li>
+        <h2>{{comic.title}}</h2>
+      </li>
+    </ul>
+  </div>
+</div>
