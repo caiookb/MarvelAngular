@@ -1,7 +1,10 @@
 import { Component, OnInit, Input  } from '@angular/core';
 import { Router } from '@angular/router';
 import { Comics } from '../models/comics';
+import { RareComics } from '../models/RareComics';
+
 import { ComicsService } from '../services/comics.service';
+import { MaxLengthValidator } from '@angular/forms';
 
 declare var $: any;
 
@@ -17,7 +20,10 @@ export class ComicsListComponent implements OnInit {
   /**
   * O Input especifica quais propriedades podemos definir em um componente.
   */  @Input()
+
   comics: Comics[] = [];
+  rareComic: Comics[] = [];
+
   selectedComic: Comics;
 
   /**
@@ -50,15 +56,26 @@ export class ComicsListComponent implements OnInit {
     this.comicsService.getComics().subscribe(
       comicsList => {
         this.comics = comicsList.data.results;
-        console.log(this.comics);
-      });
+        this.rareComic = comicsList.data.results[Math.floor(Math.random() * this.comics.length)];
+
+        var random = Math.floor(Math.random() * this.comics.length);
+
+        console.log(this.comics.slice(random, random + 2))
+
+        
+
+
+
+
+    });
   }
+ 
 
   /** 
   Método com função em jQuery que faz um slide up, ocultando a <div> dos 
   detalhes dos Comics.
   */
-  hide() {
+  hide(){
     $(document).ready(function () {
       $(document).on("click", "#slideUp", function () {
         $('#cdetail').slideUp();

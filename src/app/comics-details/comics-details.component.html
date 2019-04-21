@@ -1,12 +1,16 @@
 <div class="container" id="cdetail" *ngIf="comic">
-  <div class="col-md-12">
+  <div class="row">
+  <div class="col-md-6">
     <img class="img" [src]="comic.thumbnail.path + '/portrait_uncanny.' + comic.thumbnail.extension" />
   </div>
-  <div class="col-md-12">
+
+  <div class="col-md-6">
     <h2>{{comic.title}}</h2>
-    <h4>ID: {{comic.id}}</h4>
+    <h4>ID: {{comic.id}}</h4> 
     <h4>${{comic.prices[0].price}}</h4>
     <p>{{comic.description}}</p>
     <button id="slideUp">CLOSE</button>
+
+  </div>
   </div>
 </div>
