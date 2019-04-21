@@ -12,9 +12,11 @@
 
 body {
   height: 100vh;
-  background: url(./assets/img/background.png);
+  background:   linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/img/background.png);
   background-size: cover;
   padding-top: 100px;
+
+    
 }
 
 li {
@@ -29,30 +31,3 @@ img {
   margin-bottom: 30px;
 }
 
-.col-md-2 {
-  color: white;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.col-md-3 {
-  color: white;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin: auto;
-}
-
-.col-md-6{
-  margin: auto;
-  text-align: center;
-}
-
-.col-md-12 {
-  color: white;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin: auto;
-}
