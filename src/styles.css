@@ -11,12 +11,9 @@
 }
 
 body {
-  height: 100vh;
-  background:   linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/img/background.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./assets/img/background.png);
   background-size: cover;
   padding-top: 100px;
-
-    
 }
 
 li {
@@ -26,8 +23,3 @@ li {
 img {
   cursor: pointer;
 }
-
-.container{
-  margin-bottom: 30px;
-}
-

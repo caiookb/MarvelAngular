@@ -1,11 +1,6 @@
 .footer {
     background-color: #343a40;
-    border-top: 8px solid rgb(216, 35, 42);
-}
-
-.btn{
-    background-color: rgb(216, 35, 42);
-
+    border-top: 8px solid #d8232a;
 }
 
 .col-md-4 {
@@ -56,9 +51,6 @@
     margin-bottom: 5px;
     text-align: center;
     color: white;
-
-
-
 }
 
 .list-group-item:hover {

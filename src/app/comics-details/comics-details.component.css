@@ -1,9 +1,11 @@
 .container {
   background-color: rgb(155, 4, 4);
-  padding: 30px;
   color: white;
-
-
+  padding: 50px 50px;
+  border-bottom: 6px solid white;
+  border-top: 6px solid white;
+  position: relative;
+  margin-bottom: 200px;
 
 }
 
@@ -13,17 +15,37 @@
   text-decoration: underline;
 }
 
-.container img {
-  margin: auto;
+.col-md-6 img {
   box-shadow: 0px 0px 50px 30px rgb(216, 35, 42);
+}
+
+.col-md-6 {
+  text-align: center;
 }
 
 .col-md-6:nth-child(1) {
   border-right: 2px solid black;
 }
 
-#slideUp {
-  color: black;
-  padding: 10px;
-  border: 2px solid white;
+.col:nth-child(1){
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
 }
+
+button {
+  color: black;
+  background-image: url(../../assets/img/return.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(155, 4, 4);
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+

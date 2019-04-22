@@ -1,6 +1,8 @@
-<app-comics-details [comic]="selectedComic"></app-comics-details>
+<!--
+  
+  <app-comics-details [comic]="selectedComic"></app-comics-details>
 
-<!--<div class="container">
+<div class="container">
   <h2>MOST READ COMICS</h2>
   <div class="row">
     <ul class='col-md-3' id="img" (click)="onSelect(comic)" *ngFor="let comic of comics | slice:-12:-8">
@@ -20,7 +22,7 @@
 
       <div class="col">
         <img [src]="comic.thumbnail.path + '/portrait_uncanny.' + comic.thumbnail.extension" id="img"
-          (click)="onSelect(comic)">
+          (click)="onSelect(comic)" [routerLink]="['/comicsDetails/', comic.id]">
       </div>
 
       <div class="col">
