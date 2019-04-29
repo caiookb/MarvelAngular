@@ -27,10 +27,13 @@ export class ComicsDetailsComponent implements OnInit {
     this.route.params.subscribe(params => {
       const id = params['id'];
       this.comicsService.getComic(id).subscribe(comicdetail => 
-        this.comicdetail = comicdetail.data.results);
-
+        this.comicdetail = comicdetail.data.results
+        );
      })
+  
   }
+
+ 
 
 
   goBack(): void{

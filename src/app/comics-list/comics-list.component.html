@@ -12,13 +12,15 @@
 </div>
 -->
 
-<div class="container">
-  <div class="row">
+<div class="container" >
+    <!--<button (click)="loadMore()" >Test</button>-->
+
+  <div class="row d-flex justify-content-center">
+
     <div class="col-md-3" *ngFor="let comic of comics" routerLink="/details/{{comic.id}}">
 
-      <div class="col">
-        <img [src]="comic.thumbnail.path + '/portrait_uncanny.' + comic.thumbnail.extension" id="img"
-          (click)="onSelect(comic)">
+      <div class="col d-flex justify-content-center">
+        <img [src]="comic.thumbnail.path + '/portrait_uncanny.' + comic.thumbnail.extension" id="img">
       </div>
 
       <div class="col">
@@ -27,4 +29,6 @@
       </div>
     </div>
   </div>
+
+
 </div>

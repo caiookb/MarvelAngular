@@ -1,38 +1,35 @@
 .footer {
     background-color: #343a40;
     border-top: 8px solid #d8232a;
-
 }
 
 .col-md-4 {
-    padding: 15px 40px ;
+    padding: 15px 40px;
 }
 
 .col-md-4 h2 {
     font-size: 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
-
 }
 
 .col-md-4 p {
     font-size: 16px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
-
 }
 
-.col-md-4 input {
-    margin: auto;
+input {
     height: 40px;
-    width: 250px;
-    padding: 10px;
+    width: 70%;
+    float: left;
 }
 
-.col-md-4 button {
+button {
     height: 40px;
-    width: 100px;
-    margin-left: 10px;
+    background-color: red;
+    width: 30%;
+    text-align: center;
 }
 
 .col-md-4 .row {
@@ -40,9 +37,8 @@
     padding: 5px 0px 5px 0px;
 }
 
-.col-md-3:nth-child(1) {
-    background-repeat: no-repeat;
-    background-size: 100px;
+.col-md-4 img {
+    padding: 5px;
 }
 
 .list-group-item {
@@ -57,3 +53,5 @@
 .list-group-item:hover {
     background-color: rgb(163, 31, 36);
 }
+
+

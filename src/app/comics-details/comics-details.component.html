@@ -1,18 +1,23 @@
-<div class="container" id="cdetail">
+<div class="container">
     <div class="col">
-        <button (click)="goBack()" ></button>
+        <button (click)="goBack()"></button>
     </div>
-  <div class="row" *ngFor="let comic of comicdetail">
-      <div class="col-md-6">  
+    <div class="row" *ngFor="let comic of comicdetail">
+        <div class="col-md-6">
             <img class="img" [src]="comic.thumbnail.path + '/portrait_uncanny.' + comic.thumbnail.extension" />
-      </div>
+        </div>
 
-      <div class="col-md-6">
-          <h2>{{comic.title}}</h2>
-          <h4>ID: {{comic.id}}</h4>
-          <h4>${{comic.prices[0].price}}</h4>
-          <p>{{comic.description}}</p>       
-      </div>
+        <div class="col-md-6">
+            <h2>{{comic.title}}</h2>
+            <p><strong>Published:</strong> {{comic.dates[0].date | date }}</p>
+            <p>{{comic.description}}</p>
+            <p>{{comic.characters.items[0].name}}</p>
 
-  </div>
+ 
+
+
+
+        </div>
+
+    </div>
 </div>

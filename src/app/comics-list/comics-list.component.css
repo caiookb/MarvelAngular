@@ -6,9 +6,7 @@
 
 .container{
   color: white;
-  clear: both;
   min-height: 800px;
-
 }
 
 img {
@@ -17,15 +15,12 @@ img {
   border: 2px solid rgb(216, 35, 42);
 }
 
-
-
 .title{
   margin-top: 10px ;
   margin-bottom: 20px;
   font-size: 16px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: lighter;
-  text-align: left;
   color: white;
 }
 

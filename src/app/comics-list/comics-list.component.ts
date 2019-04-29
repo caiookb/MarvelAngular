@@ -23,12 +23,15 @@ export class ComicsListComponent implements OnInit {
 
   comics: Comics[] = [];
   rareComic: Comics[] = [];
+  sliceinit: number = 1;
+  sliceend: number = 20;
 
-  selectedComic: Comics;
+
 
   /**
   É onde ocorre as injeções de dependência, para que possa utilizar dos métodos.
-  */  constructor(private comicsService: ComicsService, private route: ActivatedRoute, private router: Router){}
+  */  
+  constructor(private comicsService: ComicsService, private route: ActivatedRoute, private router: Router){}
 
   /**
   ngOnInit ele é carregado assim que um componente inicia, então coloquei os métodos.
@@ -36,18 +39,6 @@ export class ComicsListComponent implements OnInit {
   */  
   ngOnInit() {
     this.listComics();
-    this.hide();
-    this.show();
-    this.scrollTop();
-
-  }
-
-  /*
-  Método responsável por definir o Comic que foi selecionado, para 
-  posteriormente exibir nos detalhes.
-  */
-  onSelect(comic: Comics): void {
-    this.selectedComic = comic;
   }
 
   /** 
@@ -56,55 +47,22 @@ export class ComicsListComponent implements OnInit {
   listComics() {
     this.comicsService.getComics().subscribe(
       comicsList => {
-        this.comics = comicsList.data.results;
+        this.comics = comicsList.data.results.slice(this.sliceinit,this.sliceend);
         this.rareComic = comicsList.data.results[Math.floor(Math.random() * this.comics.length)];
-
+        
         var random = Math.floor(Math.random() * this.comics.length);
       console.log(this.comics.slice(random, random + 2))
+      console.log(this.comics)
+      console.log(comicsList.data)
+
+
     });
   }
 
-
- 
-
-  /** 
-  Método com função em jQuery que faz um slide up, ocultando a <div> dos 
-  detalhes dos Comics.
-  */
-  hide(){
-    $(document).ready(function () {
-      $(document).on("click", "#slideUp", function () {
-        $('#cdetail').slideUp();
-      });
-    });
+  loadMore(){
+    this.sliceinit += 20;
+    this.sliceend += 20;
+    this.listComics();
+    console.log(this.comics);
   }
-
-  /** 
-  Método com função em jQuery que faz um slide down, permitindo exibir a <div> dos 
-  detalhes dos Comic.
-  */
-  show() {
-    $(document).ready(function () {
-      $(document).on("click", "#img", function () {
-        $('#cdetail').slideDown();
-
-      });
-    });
-  }
-
-  /**
-  Método com função em jQuery que faz com que a página faça um scroll para a <div>
-  dos detalhes dos Comics de forma automática.
-   */
-  scrollTop() {
-    $(document).ready(function () {
-      $(document).on("click", "#img", function () {
-        $("html").animate({ 
-          scrollTop: ($('#cdetail').offset().top)});
-      });
-    });
-  }
-
-
-
 }

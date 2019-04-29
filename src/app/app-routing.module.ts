@@ -12,8 +12,7 @@ import { HomeComponent } from './home/home.component';
   Constante com os caminhos para cada componente.
   */
    const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/comics', pathMatch: 'full'},
   { path: 'comics', component: ComicsListComponent },
   { path: 'details/:id', component: ComicsDetailsComponent },
   { path: 'rares', component: ComicsRareComponent },
