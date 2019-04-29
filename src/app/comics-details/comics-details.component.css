@@ -6,7 +6,7 @@
   border-top: 6px solid white;
   position: relative;
   margin-bottom: 200px;
-
+  min-height: 400px;
 }
 
 .container h2 {
@@ -46,6 +46,5 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-
 }
 

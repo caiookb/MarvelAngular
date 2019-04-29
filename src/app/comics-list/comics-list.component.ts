@@ -1,5 +1,5 @@
 import { Component, OnInit, Input  } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Comics } from '../models/comics';
 import { RareComics } from '../models/RareComics';
 
@@ -28,7 +28,7 @@ export class ComicsListComponent implements OnInit {
 
   /**
   É onde ocorre as injeções de dependência, para que possa utilizar dos métodos.
-  */  constructor(private comicsService: ComicsService, private router: Router) {}
+  */  constructor(private comicsService: ComicsService, private route: ActivatedRoute, private router: Router){}
 
   /**
   ngOnInit ele é carregado assim que um componente inicia, então coloquei os métodos.
@@ -39,6 +39,7 @@ export class ComicsListComponent implements OnInit {
     this.hide();
     this.show();
     this.scrollTop();
+
   }
 
   /*
@@ -59,16 +60,11 @@ export class ComicsListComponent implements OnInit {
         this.rareComic = comicsList.data.results[Math.floor(Math.random() * this.comics.length)];
 
         var random = Math.floor(Math.random() * this.comics.length);
-
-        console.log(this.comics.slice(random, random + 2))
-
-        
-
-
-
-
+      console.log(this.comics.slice(random, random + 2))
     });
   }
+
+
  
 
   /** 

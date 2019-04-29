@@ -1,7 +1,4 @@
 <!--
-  
-  <app-comics-details [comic]="selectedComic"></app-comics-details>
-
 <div class="container">
   <h2>MOST READ COMICS</h2>
   <div class="row">
@@ -17,25 +14,17 @@
 
 <div class="container">
   <div class="row">
-
-    <div class="col-md-3" *ngFor="let comic of comics">
+    <div class="col-md-3" *ngFor="let comic of comics" routerLink="/details/{{comic.id}}">
 
       <div class="col">
         <img [src]="comic.thumbnail.path + '/portrait_uncanny.' + comic.thumbnail.extension" id="img"
-          (click)="onSelect(comic)" [routerLink]="['/comicsDetails/', comic.id]">
+          (click)="onSelect(comic)">
       </div>
 
       <div class="col">
-        <span class="badge badge-danger" *ngIf="rareComic == comic">  RARO </span>
+        <span class="badge badge-danger" *ngIf="rareComic == comic"> RARO </span>
         <h5 class="title">{{comic.title}}</h5>
-
-
       </div>
-
-
     </div>
-
-  
-
   </div>
 </div>

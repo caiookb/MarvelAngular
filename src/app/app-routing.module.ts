@@ -6,7 +6,6 @@ import { MenuComponent } from './menu/menu.component';
 import { ComicsRareComponent } from './comics-rare/comics-rare.component';
 import { ComicsRareDetailsComponent } from './comics-rare-details/comics-rare-details.component';
 import { HomeComponent } from './home/home.component';
-import { ActivatedRoute } from '@angular/router';
 
 
   /**
@@ -16,7 +15,7 @@ import { ActivatedRoute } from '@angular/router';
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
   { path: 'comics', component: ComicsListComponent },
-  { path: 'comicsDetails/:id', component: ComicsDetailsComponent },
+  { path: 'details/:id', component: ComicsDetailsComponent },
   { path: 'rares', component: ComicsRareComponent },
 ];
 

@@ -1,8 +1,8 @@
-<div class="container" id="cdetail" >
+<div class="container" id="cdetail">
     <div class="col">
-        <button  routerLink="/comics" ></button>
+        <button (click)="goBack()" ></button>
     </div>
-  <div class="row">
+  <div class="row" *ngFor="let comic of comicdetail">
       <div class="col-md-6">  
             <img class="img" [src]="comic.thumbnail.path + '/portrait_uncanny.' + comic.thumbnail.extension" />
       </div>

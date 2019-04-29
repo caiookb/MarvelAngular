@@ -15,6 +15,7 @@ export class ComicsService {
    */
 
   private url = "http://gateway.marvel.com/v1/public/comics?ts=1&apikey=006e9fbaed5362ba1bfe67c9233287ac&hash=d73cae75ae9a051014e171efd07193a3&limit=24&offset=1000";
+  private comic = "http://gateway.marvel.com";
 
   constructor(private http: HttpClient) { }
 
@@ -24,6 +25,10 @@ export class ComicsService {
   */
   getComics(): Observable<any>{
     return this.http.get<any>(this.url);
+  }
+
+  getComic(id: number): Observable<any>{
+    return this.http.get(`${this.comic}/v1/public/comics/${id}?ts=1&apikey=006e9fbaed5362ba1bfe67c9233287ac&hash=d73cae75ae9a051014e171efd07193a3&limit=24&offset=1000"`);
   }
 
 }
